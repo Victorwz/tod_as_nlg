@@ -1,4 +1,4 @@
-# GPT-ACN
+# Task-Oriented Dialogue System as Natural Language Generation
 
 Our code is developed on the ConvLab github page (https://github.com/ConvLab/ConvLab) and NeuralPipeline_DSTC8 (https://github.com/KAIST-AILab/NeuralPipeline_DSTC8).
 
@@ -7,7 +7,7 @@ Our code is developed on the ConvLab github page (https://github.com/ConvLab/Con
 python version : 3.6.5
 
 Before creating conda environment, please edit env.yml to fit on your conda root path.
-For example, \'/home/jglee/anaconda\'.
+For example, \'/home/weizhi.wwz/anaconda\'.
 
 ```
 conda env create -f env.yml
@@ -35,7 +35,7 @@ cd ../../  # (working directory)
 sh run.sh
 ```
 
-`-m torch.distributed.launch --nproc_per_node=${#OfGPUs}` in run.sh is to use multi GPUs. If you would like to train with single GPU, you can remove this part.
+`-m torch.distributed.launch --nproc_per_node=${#GPU}` in run.sh is to use multi GPUs. If you would like to train with single GPU, you can remove this part.
 
 The parameter of `--log_dir` is the path for saving trained model checkpoints. You need to modify this parameter before training.
 
