@@ -1,6 +1,14 @@
 # Task-Oriented Dialogue System as Natural Language Generation
 
-Our code is developed on the ConvLab github page (https://github.com/ConvLab/ConvLab) and NeuralPipeline_DSTC8 (https://github.com/KAIST-AILab/NeuralPipeline_DSTC8).
+Code for our paper "[Task-Oriented Dialogue System as Natural Language Generation](https://arxiv.org/abs/2108.13679)". Please cite our paper if you find this repository helpful in your research:
+```
+@article{wang2021task,
+  title={Task-Oriented Dialogue System as Natural Language Generation},
+  author={Wang, Weizhi and Zhang, Zhirui and Guo, Junliang and Dai, Yinpei and Chen, Boxing and Luo, Weihua},
+  journal={arXiv preprint arXiv:2108.13679},
+  year={2021}
+}
+```
 
 ## Environment setting
 
@@ -54,5 +62,5 @@ We have pre-set the path to model checkpoint in 'model_checkpoint'. If you want 
 
 ## Credit
 
-Our code is based on huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.) and NeuralPipeline_DSTC8 (https://github.com/KAIST-AILab/NeuralPipeline_DSTC8).
+Our code is developed on the ConvLab github page (https://github.com/ConvLab/ConvLab), huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai) and NeuralPipeline_DSTC8 (https://github.com/KAIST-AILab/NeuralPipeline_DSTC8).
 
