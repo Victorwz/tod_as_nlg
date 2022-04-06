@@ -1,6 +1,6 @@
 # Task-Oriented Dialogue System as Natural Language Generation
 
-Code for our paper "[Task-Oriented Dialogue System as Natural Language Generation](https://arxiv.org/abs/2108.13679)". Please cite our paper if you find this repository helpful in your research:
+Official implementation of SIGIR 2022 Paper "[Task-Oriented Dialogue System as Natural Language Generation](https://arxiv.org/abs/2108.13679)". Please cite our paper if you find this repository helpful in your research:
 ```
 @article{wang2021task,
   title={Task-Oriented Dialogue System as Natural Language Generation},
@@ -25,7 +25,8 @@ conda activate gpt_acn
 Otherwise, you can create a conda environment with python 3.6 then install all the requirement packages.
 
 ```
-conda create -n env_name python=3.6
+conda create -n env_name python=3.6 # revise env_name as you like
+conda activate env_name
 pip install -r requirements.txt --no-dependencies
 ```
 
@@ -36,18 +37,14 @@ The description below follows the working directory.
 
 ```
 cd ConvLab # (working directory)
-cd data/multiwoz
-unzip total.zip
-unzip val.zip
-cd ../../  # (working directory)
-sh run.sh
+bash run.sh
 ```
 
 `-m torch.distributed.launch --nproc_per_node=${#GPU}` in run.sh is to use multi GPUs. If you would like to train with single GPU, you can remove this part.
 
 The parameter of `--log_dir` is the path for saving trained model checkpoints. You need to modify this parameter before training.
 
-Please refer to huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.) 
+Please refer to huggingface's TransferTransfo (https://github.com/huggingface/transfer-learning-conv-ai.)
 
 
 ## How to test on ConvLab
