@@ -130,7 +130,7 @@ class _ReaderBase:
                 return self._item2idx['<unk>']
 
         def decode(self, idx):
-            idx = np.int(idx)
+            idx = int(idx)
             if idx < len(self):
                 return self._idx2item[idx]
             else:
