@@ -84,7 +84,7 @@ def padding_data(data):
         sen_padded = padding(sess, max_post_length)
         for j, sen in enumerate(sess):
             if j == 0:
-                post_single = np.zeros([max_sentence_num, max_post_length], np.int)
+                post_single = np.zeros([max_sentence_num, max_post_length], int)
             else:
                 post_single = posts[-1].copy()
                 post_single[j-1, :] = sen_padded[j-1]
